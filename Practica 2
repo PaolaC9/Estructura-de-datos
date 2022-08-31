@@ -1,0 +1,30 @@
+package Practica;
+import java.util.Scanner;
+
+
+public class clase1 {
+
+    public static void main(String[] args) {
+    Scanner entrada=new Scanner(System.in);
+   
+    float promedio=0;
+    float suma=0;
+    float mayor=0;
+    float menor=0;
+    int[] array= new int[10];    
+   
+    for(int i=0; i<10; i++){
+   System.out.println("Introduce el numero de la posicion " +(i)+":");
+        array[i]=entrada.nextInt();
+    }
+           
+    for(int i=0; i<array.length; i++){
+        suma +=array[i];
+        if(mayor<array[i]){
+        mayor=array[i];
+    }
+        System.out.println(String.format("posicion[%d]Elemento:%d",i, array[i]));
+    }
+    }
+   
+}
