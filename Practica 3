@@ -1,0 +1,33 @@
+package est_datos_b;
+
+import java.util.Scanner;
+
+
+public class Practica_clase_3 {
+
+    public static void main(String[] args) {
+    
+        //se declara la matriz
+       int matriz[][]=new int[3][3];
+       //se solicitan valores al usuario
+       Scanner entrada = new Scanner (System.in);
+       
+       float sumaFila=0;
+       for(int i=0; i<matriz.length; i++){
+           for(int j=0; j<matriz.length; j++){
+               
+           System.out.print("Ingrese el numero en la fila: "+(i)+"columna "+j+":");
+           matriz[i][j]=entrada.nextInt();
+       }
+    }
+        for (int[] matriz1 : matriz) {
+            sumaFila=0;
+            for (int j = 0; j<matriz.length; j++) {
+                sumaFila += matriz1[j];
+                System.out.print(String.format("%d", matriz1[j]));
+            }
+            System.out.print(String.format(" suma por fila: %f,promedio fila: %f" , sumaFila/matriz.length));
+            System.out.println();
+        }
+    }
+}
