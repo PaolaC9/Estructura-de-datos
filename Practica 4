@@ -1,0 +1,30 @@
+package est_datos_b;
+
+public class Practica_clase_4 {
+
+    public static void main(String[] args) {
+        int a=20,b=10;
+        String x="Programacion", y="Objetos";
+        
+        int ar[]={1,2,3};
+        int br[]={1,2,3};
+        
+        boolean condicion =true;
+        
+        System.out.println("a==b: "+(a==b));
+        System.out.println("a<b: "+(a<b));
+        System.out.println("a<=b: "+(a<=b));
+        System.out.println("a>b: "+(a>b));
+        System.out.println("a>=b: "+(a>=b));
+        System.out.println("a!=b: "+(a!=b));
+        
+        System.out.println("x==y: "+(ar==br));
+        System.out.println("condicion==true: "+(condicion==true));  
+        //¿los arreglos se pueden comparar con operadores relacionales?
+        //¿si/no  y porque?
+      /**si, cuando los operadores relacionales van a comparar arreglos lo que 
+      va tomando es elemento por elemento; donde los arreglos deben tener el 
+      mismo tamaño para que sean compatibles y mientas tengan un mayor, menor, igual o diferente que.**/ 
+    }
+    
+}
