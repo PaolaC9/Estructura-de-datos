@@ -1,1 +1,87 @@
+package est_datos_b
+public class Practica_clase_5
+public static void main(String[] args) {
+    //Tarea instanciar objetos para mostrar en pantalla los valores y permitir al usuario el ingreso de valores
+        
+    }
+    //hacer uso de o(N) en un arreglo
+    public void printSumaYProducto (int []array){
+        int suma= 0;
+        int producto =1;
+        for (int i = 0; i < array.length; i++) {
+            suma+=array[i];
+            
+        }
+        for (int i = 0; i < array.length; i++) {
+            producto*=array[i];
+            System.out.println(suma+","+producto);
+        } 
+    }
+    //ahora aplicamos o(N*2) es decir hay bucle, ciclo o lazo que itera N veces y otro interior que también itera N veces 
+    public void printPares (int []array){
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length; j++) {
+                
+                System.out.println(array[i]+ "," + array[j]);                
+            }
+        }
+    }
+    //al mismo código que el anterior al ciclo interno se agrega i+1
+    public void printPares(String[]array){
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array.length; j++) {
+                
+                System.out.println(array[i]+","+array[j]);
+            }
+        }
+    }
+    /* más o menos una salida seria: 
+    (1,2),(1,3),(1,4),(1,5)
+    (2,3),(2,4),(2,5)
+    (3,4),(3,5)
+    (4,5)
+    Aunque el ciclo, lazo, interno sea más pequeño que el exterior no es importante entrar en los detalles ni crear cosntantes
+    */
+    
+    /* pendientes desarrollar mas notaciones y editar preguntas para la actividad se hace uso de la notación O(A*B)
+    */
+ public void printArray (int[]arrayA, int[]arrayB){
+        for (int a:arrayA){
+            for(int b:arrayB){
+                if(a>b){
+                    System.out.println(a+","+b);
+                }
+            }
+        }
+        /*Al tener un ciclo dentro de otro ciclo el tiempo
+        de ejecucion se multiplica debido a que los
+        conjuntos de datos son distintos se hace us de O(A*B)*/
+    }
+    /*¿Que pasaria si en el mismo codigo introducimos un ciclo 
+    interno que tiene un valor constante? */
+    
+    public void printArrays(int []arraysA, int []arraysB){
+        for(int a:arraysA){
+            for(int b:arraysB){
+                for (int i=0; i<1000000; i++){
+                    System.out.println(a+","+b);
+                }
+            }
+        }
+    }
+    public static void revers(int []arrays) {
+        for(int i=0; i<arrays.length/2;i++){
+            int other=arrays.length-i-1;
+            int temp=arrays[i];
+            arrays[i]=arrays[other];
+            arrays[other]=temp;
+        }
+        /*¿El resultado es similar al anterior si/no porq?
+        ¿Cual de las expresiones es similar a O(n): ?
+        a) O(n+p) en donde p=n/2
+        b) O(2n)
+        c) O(n+m)*/
+    }
+}
+
 
